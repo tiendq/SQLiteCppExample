@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8.12) # first version with add_compile_options()
-project(SQLiteCpp_Example)
+cmake_minimum_required(VERSION 3.12)
+project(SQLiteCppExample)
 
 # add SQLite3 C++ wrapper arround sqlite3 library (and sqlite3 itself provided for ease of use)
 # NOTE: here you can set CMake variables to avoid building Example, as well as cpplint, cppcheck...
@@ -9,9 +9,8 @@ set(SQLITECPP_RUN_CPPLINT OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(SQLiteCpp)
 
-# add main.cpp example source code
-set(MAIN_TARGET_NAME SQLiteCpp_Example)
-add_executable(SQLiteCpp_Example src/main.cpp)
+set(MAIN_TARGET_NAME SQLiteCppExample)
+add_executable(${MAIN_TARGET_NAME} src/main.cpp)
 
 if(UNIX AND NOT APPLE)
   # Linux
