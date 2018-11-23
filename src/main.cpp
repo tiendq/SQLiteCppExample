@@ -47,6 +47,9 @@ int main() {
     nb = db.exec(sql);
     cout << sql << " returned " << nb << '\n';
 
+    string count = db.execAndGet("SELECT COUNT(*) FROM test");
+    cout << "COUNT(*) = " << count << '\n';
+
     // Check the results, expect two rows
     sql = "SELECT * FROM test";
     SQLite::Statement query(db, sql);
