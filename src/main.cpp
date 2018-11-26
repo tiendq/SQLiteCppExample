@@ -58,6 +58,12 @@ int main() {
     while (query.executeStep())
       cout << "row (" << query.getColumn(0) << ", " << query.getColumn(1) << ")\n";
 
+    SQLite::Statement countQuery(db, "SELECT COUNT(*) FROM test WHERE id=:id");
+    countQuery.bind(":id", 2);
+
+    while (countQuery.executeStep())
+      cout << "COUNT(*) with conditionals " << countQuery.getColumn(0) << '\n';
+
     db.exec("DROP TABLE test");
   }
   catch (exception const &e) {
