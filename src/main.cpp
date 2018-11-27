@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
-#include <SQLiteCpp/SQLiteCpp.h>
+#include <SQLiteCpp.h>
 
 using namespace std;
 
