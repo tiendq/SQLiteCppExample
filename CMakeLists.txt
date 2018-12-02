@@ -3,7 +3,7 @@ project(SQLiteCppExample)
 
 add_subdirectory(SQLiteCpp)
 add_executable(${PROJECT_NAME} src/main.cpp)
-target_include_directories(${PROJECT_NAME} PRIVATE SQLiteCpp/include/SQLiteCpp)
+target_include_directories(${PROJECT_NAME} PRIVATE SQLiteCpp/include)
 
 if(UNIX AND NOT APPLE)
   # Removed linking to pthread, more detail:

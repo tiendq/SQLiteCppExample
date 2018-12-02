@@ -1,8 +1,6 @@
 #include <exception>
 #include <iostream>
-#include <cstdio>
-#include <cstdlib>
-#include <SQLiteCpp.h>
+#include <SQLiteCpp/SQLiteCpp.h>
 
 using namespace std;
 
