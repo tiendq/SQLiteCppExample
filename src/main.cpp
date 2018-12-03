@@ -17,7 +17,6 @@ void assertion_failed(const char* apFile, const long apLine, const char* apFunc,
 
 int main() {
   // Using SQLITE_VERSION would require #include <sqlite3.h> which we want to avoid.
-  // cout << "SQLite3 version " << SQLITE_VERSION << '\n';
   // Use SQLite::VERSION if possible.
   cout << "SQLite3 version " << SQLite::VERSION << " (" << SQLite::getLibVersion() << ")" << '\n';
   cout << "SQLiteC++ version " << SQLITECPP_VERSION << '\n';
@@ -63,8 +62,7 @@ int main() {
       cout << "COUNT(*) with conditionals " << countQuery.getColumn(0) << '\n';
 
     db.exec("DROP TABLE test");
-  }
-  catch (exception const &e) {
+  } catch (exception const &e) {
     cout << "SQLite exception: " << e.what() << '\n';
     return EXIT_FAILURE;
   }
