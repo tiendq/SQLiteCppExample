@@ -5,13 +5,10 @@ C++ example project using [SQLiteCpp](https://github.com/tiendq/SQLiteCpp) as a 
 
 ## Getting Started
 
-Clone this repository and then init and update submodule SQLiteCpp.
+Clone this repository and then init and update submodule `SQLiteCpp`.
 
 ```shell
-git clone https://github.com/tiendq/SQLiteCppExample.git
-cd SQLiteCppExample
-git submodule init
-git submodule update
+git clone --recurse-submodules https://github.com/tiendq/SQLiteCppExample.git
 ```
 
 Build with CMake.
