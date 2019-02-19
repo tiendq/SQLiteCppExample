@@ -4,24 +4,12 @@
 
 using namespace std;
 
-#ifdef SQLITECPP_ENABLE_ASSERT_HANDLER
-namespace SQLite {
-
-void assertion_failed(const char* apFile, const long apLine, const char* apFunc, const char* apExpr, const char* apMsg) {
-  std::cerr << apFile << ":" << apLine << ":" << " error: assertion failed (" << apExpr << ") in " << apFunc << "() with message \"" << apMsg << "\"\n";
-  std::abort();
-}
-
-}
-#endif // SQLITECPP_ENABLE_ASSERT_HANDLER
-
 int main() {
   // Using SQLITE_VERSION would require #include <sqlite3.h> which we want to avoid.
   // Use SQLite::VERSION if possible.
   cout << "SQLite3 version " << SQLite::VERSION << " (" << SQLite::getLibVersion() << ")" << '\n';
   cout << "SQLiteC++ version " << SQLITECPP_VERSION << '\n';
 
-  // Simple batch queries example
   try {
     // Open a database file in create/write mode
     SQLite::Database db("test.db3", SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);

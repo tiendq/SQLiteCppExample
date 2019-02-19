@@ -1,7 +1,7 @@
 SQLiteC++ Example
 -----------------
 
-C++ example project using [SQLiteCpp](https://github.com/tiendq/SQLiteCpp) as a Git submodule.
+The C++ example project using [SQLiteCpp](https://github.com/tiendq/SQLiteCpp) as a Git submodule. More examples are available at SQLiteCpp repo.
 
 ## Getting Started
 
