@@ -1,7 +1,7 @@
 SQLiteC++ Example
 -----------------
 
-The C++ example project using [SQLiteCpp](https://github.com/tiendq/SQLiteCpp) as a Git submodule. More examples are available at SQLiteCpp repo.
+The C++ example project using [SQLiteCpp](https://github.com/tiendq/SQLiteCpp) as a Git submodule. More examples are available at `SQLiteCpp` repo.
 
 ## Getting Started
 
@@ -19,5 +19,7 @@ cd build
 cmake ..
 cmake --build .
 ```
+
+## History
 
 This repo is originally forked from [SQLiteCpp_Example](https://github.com/SRombauts/SQLiteCpp_Example).
